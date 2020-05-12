@@ -1,0 +1,18 @@
+/* header {
+    height: 90vh;
+    background-image: url(../../assets/frutas_header.jpg);
+    
+} */
+.parallax{
+    background-image: url(../../assets/frutas_header.jpg);
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.divlorem {
+    height: 40vh;
+    width: 50vw;
+}
