@@ -27,15 +27,17 @@
 <article class="container">
     <h1 class="text-monospace text-center my-5">Bem vindo a nossa loja!</h1>
     <div class="row d-flex justify-content-around">
-        <div class="card col-3 m-3" style="width: 18rem;" *ngFor="let produto of listaProdutos">
+        <div class="card col-10 col-md-4 col-lg-3 m-3" style="width: 18rem;" *ngFor="let produto of listaProdutos">
             <div class="card-body">
-                <img src="{{ produto.imagem }}" class="card-img-top" alt="..." style="width: 200px; height: 150px; background-size: cover; ">
+                <div class="d-flex justify-content-center">
+                    <img src="{{ produto.imagem }}" class="card-img-top" alt="..." style="width: 200px; height: 150px; background-size: cover; ">
+                </div>
                 <h4 class="card-title text-center">{{ produto.nome }}</h4>
                 <p class="card-text">Código: {{ produto.id }}</p>
                 <p class="card-text">Preço: R{{ produto.preco | currency }}</p>
                 <p class="card-text">Quantidade no Estoque: {{ produto.qtdEstoque }}</p>
                 <div class="d-flex justify-content-around">
-                    <a class="btn btn-outline-danger">Apagar</a>
+                    <a class="btn btn-outline-danger" href="">Apagar</a>
                     <a [routerLink]="['/editar', produto.id]" class="btn btn-outline-info">Editar</a>
                 </div>
             </div>
